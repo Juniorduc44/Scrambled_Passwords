@@ -1,7 +1,8 @@
 import math
-print("From .33099858 BTC")
+BTC = float(input("Enter the amount of Bitcoin: "))
+print(f"From {BTC} BTC")
 
-p = 0.33099858
+p = BTC
 pp = int(p * 100000000)
 ppp = math.trunc(pp)
 pppp = "{:,.0f}".format(ppp)
