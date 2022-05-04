@@ -10,11 +10,11 @@
 
 #12v means you can only hook up 12v appliance. 110Vac appliance and 110Vac plug...then they are compatible.
 
-
 voltlist = []
 amplist = []
 wattlist = []
 count = 0
+rate = float(input("What is the rate of your electric charges per kWh? "))
 appliances= int(input("So what is the number of appliances we are looking at today? "))
 for i in range(appliances):
     count+=1
@@ -41,12 +41,12 @@ for i in range(appliances):
     kWh5 = watthrs5 / 1000  # 1month in kWh
     kWh6 = watthrs6 / 1000  # 1year in kWh
 
-    ckWh1 = kWh1*.39008     #Electricity Delivery On-peak
-    ckWh12 = kWh2*.39008    #Electricity Delivery Off-peak
-    ckWh13 = kWh3*.39008   #Electricity Delivery Super Off-peak
-    ckWh14 = kWh4 * .39008
-    ckWh15 = kWh5 * .39008
-    ckWh16 = kWh6 * .39008
+    ckWh1 = kWh1*rate
+    ckWh12 = kWh2*rate
+    ckWh13 = kWh3*rate
+    ckWh14 = kWh4 * rate
+    ckWh15 = kWh5 * rate
+    ckWh16 = kWh6 * rate
 
     c1 = "${:,.2f}".format(ckWh1)
     c2 = "${:,.2f}".format(ckWh12)
