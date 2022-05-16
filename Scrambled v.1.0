@@ -1,5 +1,6 @@
 #App "Scrambled"
 
+
 q = int(input("Please enter the number of characters you would like your scrambled password to be: "))
 if q == 8:
     #imported from "Scrambled v.1.0(pass8)" file
